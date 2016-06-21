@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="pigApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="pigCtrl">
+    Turn your setence into pig latin!
+    <input ng-model="text"><button type='submit' ng-click="pigLatin(text)">Submit</button>
+  </br>
+</br>
+    Your new setence: {{final}}
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src='./pig.js'></script>
+</html>
