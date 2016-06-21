@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app='binaryApp'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="binaryCtrl">
+    Enter Number up to 3 billion: <input ng-model="num"><button ng-click='binary(num)'>Submit</button>
+  </br>
+  {{n}}
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src='./binary.js'></script>
+</html>
