@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='mathApp'>
   <head>
     <meta charset="utf-8">
+    <link rel='stylesheet' href='style.css'>
     <title></title>
   </head>
-  <body>
-    Pass in a group of numbers and get the desired math function returned!
+  <body ng-controller='mathCtrl'>
+    <p>Pass in a group of numbers and get the desired math function returned!</p>
+  </br>
+    SQAURE of each number passed: <input type="text" ng-model="sqaures"><button type='submit' ng-click='square(sqaures)'>Submit</button>
+    <div><p>Anwser:</p> <div class="answer">
+    <div ng-repeat='f in finalsqaure track by $index' class="f">{{f}}</div>
+    </div></div>
 
-    SQAURE of each number passed: <input type="text" ng-model="sqaures"><button type='submit' ng-click='square(squares)'>Submit</button>
-    Anwser: <p>{{finalsqaure}}</p>
-
-    CUBE of each number passed: <input type="text" ng-model="cubes"><button type='submit' ng-click='cube(cube)'>Submit</button>
-    Anwser: <p>{{finalcube}}</p>
+    CUBE of each number passed: <input type="text" ng-model="cubes"><button type='submit' ng-click='cube(cubes)'>Submit</button>
+    <div><p>Anwser:</p> <div class="answer">
+    <div ng-repeat='f in finalcube' class="f">{{f}}</div>
+    </div></div>
 
     SUM of all numbers passed: <input type="text" ng-model="nums"><button type='submit' ng-click='sum(nums)'>Submit</button>
-    Anwser: <p>{{finalsum}}</p>
+    <div><p>Anwser:</p> <div class="answer">
+    <div class="f">{{finalsum}}</div>
+    </div></div>
 
     AVERAGE of all numbers passed: <input type="text" ng-model="avs"><button type='submit' ng-click='average(avs)'>Submit</button>
-    Anwser: <p>{{finalaverage}}</p>
+    <div><p>Anwser:</p> <div class="answer">
+    <div class="f">{{finalaverage}}</div>
+    </div></div>
 
     EVENS of all numbers passed: <input type="text" ng-model="evens"><button type='submit' ng-click='even(evens)'>Submit</button>
-    Anwser: <p>{{finalevens}}</p>
+    <div><p>Anwser:</p> <div class="answer">
+    <div ng-repeat='f in finalevens track by $index' class="f">{{f}}</div>
+    </div></div>
 
     ODDS of each number passed: <input type="text" ng-model="odds"><button type='submit' ng-click='odd(odds)'>Submit</button>
-    Anwser: <p>{{finalodds}}</p>
-  </body>
+    <div><p>Anwser:</p> <div class="answer">
+    <div ng-repeat='f in finalodds track by $index' class="f">{{f}}</div>
+    </div></div>
+
+    </body>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src='./math.js'></script>
 </html>
