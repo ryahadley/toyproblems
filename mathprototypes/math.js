@@ -1,52 +1,58 @@
-// TODO
-function square(arr) {
-  var final = [];
+// MATH METHODS
+var app = angular.module('mathApp', []);
+  app.controller('mathCtrl', function($scope) {
+
+
+$scope.square = function (arr) {
+  var finalsqaure = [];
   for(var i = 0; i < arr.length; i++) {
     final.push(arr[i] * arr[i]);
   }
-  return final;
+  return $scope.finalsqaure = finalsqaure;
 }
 
-function cube(arr) {
-  var final = [];
+$scope.cube = function (arr) {
+  var finalcube = [];
   for(var i = 0; i < arr.length; i++) {
     final.push(arr[i] * arr[i] * arr[i]);
   }
-  return final;
+  return $scope.finalcube = finalcube;
 }
 
-function sum(arr) {
-  var final = 0;
+$scope.sum = function (arr) {
+  var finalsum = 0;
   for(var i = 0; i < arr.length; i++) {
     final += arr[i];
   }
-  return final;
+  return $scope.finalsum = finalsum;
 }
 
-function average(arr) {
-  var final = 0;
+$scope.average = function (arr) {
+  var finalaverage = 0;
   for(var i = 0; i < arr.length; i++) {
     final += arr[i];
   }
-  return final / arr.length;
+  return $scope.finalaverage = finalaverage / arr.length;
 }
 
-function even(arr) {
-  var final = [];
+$scope.even = function (arr) {
+  var finalevens = [];
   for(var i = 0; i < arr.length; i++) {
     if(arr[i] % 2 === 0) {
       final.push(arr[i]);
     }
   }
-  return final;
+  return $scope.finalevens = finalevens;
 }
 
-function odd(arr) {
-  var final = [];
+$scope.odd = function (arr) {
+  var finalodds = [];
   for(var i = 0; i < arr.length; i++) {
     if(arr[i] % 2 !== 0) {
       final.push(arr[i]);
     }
   }
-  return final;
+  return $scope.finalodds = finalodds;
 }
+
+});

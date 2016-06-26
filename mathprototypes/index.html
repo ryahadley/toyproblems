@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Pass in a group of numbers and get the desired math function returned!
+
+    SQAURE of each number passed: <input type="text" ng-model="sqaures"><button type='submit' ng-click='square(squares)'>Submit</button>
+    Anwser: <p>{{finalsqaure}}</p>
+
+    CUBE of each number passed: <input type="text" ng-model="cubes"><button type='submit' ng-click='cube(cube)'>Submit</button>
+    Anwser: <p>{{finalcube}}</p>
+
+    SUM of all numbers passed: <input type="text" ng-model="nums"><button type='submit' ng-click='sum(nums)'>Submit</button>
+    Anwser: <p>{{finalsum}}</p>
+
+    AVERAGE of all numbers passed: <input type="text" ng-model="avs"><button type='submit' ng-click='average(avs)'>Submit</button>
+    Anwser: <p>{{finalaverage}}</p>
+
+    EVENS of all numbers passed: <input type="text" ng-model="evens"><button type='submit' ng-click='even(evens)'>Submit</button>
+    Anwser: <p>{{finalevens}}</p>
+
+    ODDS of each number passed: <input type="text" ng-model="odds"><button type='submit' ng-click='odd(odds)'>Submit</button>
+    Anwser: <p>{{finalodds}}</p>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src='./math.js'></script>
+</html>
